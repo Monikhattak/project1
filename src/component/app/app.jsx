@@ -24,7 +24,18 @@ class App extends React.Component {
         });
     };
 
+    render() {
+        return (
+            <div>
+                <Header headerExpanded={this.state.headerExpanded}
+                    headTitle={this.state.headerText}
+                />
+                <SearchBox onInputChage={this.handleInputChange} />
+                <ResultsContainer suggestedNames={this.state.suggestedNames} />
 
+            </div>
+        );
+    }
 
 }
 
